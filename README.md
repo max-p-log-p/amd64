@@ -1,5 +1,7 @@
 Requires GCC Version 8.3.0
 
+Labs 4-1 and Labs 4-2 are included in Labs 4-3 and Labs 4-4
+
 Lab 4-1
 - getDispSize returns the size of the displacement using the value of the mod/rm byte
 

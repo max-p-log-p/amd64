@@ -302,7 +302,6 @@ StartProfiling(void *func)
 void 
 StopProfiling(void) 
 {
-	// puts("StopProfiling");
 	struct sigaction act;
 	
 	act.sa_handler = SIG_DFL;

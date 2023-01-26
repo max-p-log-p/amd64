@@ -1,6 +1,6 @@
 Requires GCC Version 8.3.0
 
-Lab 2-1
+Lab 4-1
 - getDispSize returns the size of the displacement using the value of the mod/rm byte
 
 - ia32Decode checks for a prefix, then checks if an escape opcode is present which signifies a multibyte opcode. Using tthe ia32DecodeTable we can get the types of the operands. If the type is IA32_MODRM there is 1 mod/rm byte followed by a possible SIB byte and a 1 or 4 byte displacement. If the type is both IA32_MODRM and IA32_IMM8 then we perform the same step as before but add 1 for the 1 byte immediate. If the type is both IA32_MODRM and IA32_IMM32 then we perform the same step as for the IA32_MODRM but add 4 for the 4 byte immediate. If the type is IA32_IMM8 then we only add 1 to the instruction length. If the type is IA32_IMM32 then we only add 4 to the instruction length. Else, if the instruction is IA32_DATA but isn't IA32_notimpl we don't add anything since the instructions with IA32_DATA in the programs don't have a mod/rm byte. If the instruction is IA32_notimpl we manually check the opcodes and use the intel manual or the disassembly to determine the types of the operands and determine the length appropriately. It also sets the static decoded variable to the entry in ia32DecodeTable.
